@@ -1,1 +1,11 @@
+this folder contains the trees generated for the phylgenetic analyses and the tree tip labels as text files.
 
+FLS2.newick >> FLS2 clade phylogenetic tree
+FLS2.txt    >> FLS2 clade tree tip labels
+
+PERU.newick >> PERU clade phylogenetic tree
+PERU.txt    >> PERU clade tree tip labels
+
+LRR_RK.newick >> phylogenetic tree of all extracted LRR-RKs + reference LRR-RKs
+
+XII.newick >>    phylogenetic tree of subgroup XII LRR-RKs extracted from the LRR_RK.newick + reference LRR-RKs
