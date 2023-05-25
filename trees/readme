@@ -9,3 +9,7 @@ PERU.txt    >> PERU clade tree tip labels
 LRR_RK.newick >> phylogenetic tree of all extracted LRR-RKs + reference LRR-RKs
 
 XII.newick >>    phylogenetic tree of subgroup XII LRR-RKs extracted from the LRR_RK.newick + reference LRR-RKs
+
+Solanum_species.newick >> species phylogenetic tree used for Fig 4A, Fig Sn and Sn adapted from ... et al.
+
+species_list.txt       >> species list ordered same as the Solanum spcies tree
