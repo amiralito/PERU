@@ -13,3 +13,5 @@ XII.newick >>    phylogenetic tree of subgroup XII LRR-RKs extracted from the LR
 Solanum_species.newick >> species phylogenetic tree used for Fig 4A, Fig Sn and Sn adapted from ... et al.
 
 species_list.txt       >> species list ordered same as the Solanum spcies tree
+
+org_list.txt           >> genome list estimately ordered based on species tree
