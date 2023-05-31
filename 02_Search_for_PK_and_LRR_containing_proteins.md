@@ -3,7 +3,7 @@
 
 After compiling the protein database, extract the LRR-RK using the following steps:
 
-1. Search for proteins containing PK domain using *hmmsearch* and PF00069.hmm
+1. Search for proteins containing PK domain using *hmmsearch* and [PF00069.hmm](hmm/PF00069.hmm)
 ```bash
 # first search for Protein Kinase domain by searching the dataset for Pfam PF00069 hmm profile using hmmsearch and following options
 hmmsearch -o PF00069.out --tblout PF00069_tbl.out --domtblout PF00069_domtbl.out --max PF00069.hmm SolDB.fasta
@@ -50,7 +50,7 @@ PK_domain_seq <- subseq(PK_filtered_seq, start = PK_domtbl_filtered$X20, end = P
 
 ```
 
-2. Search for presence of LRR domain in the PK containing sequences using the PF00560.hmm, PF08263.hmm, PF13516.hmm, and PF13855.hmm
+2. Search for presence of LRR domain in the PK containing sequences using the [PF00560.hmm](hmm/PF00560.hmm), [PF08263.hmm](hmm/PF08263.hmm), [PF13516.hmm](hmm/PF13516.hmm), and [PF13855.hmm](hmm/PF13855.hmm)
 ```bash
 # LRR_1 (Pfam PF00560)
 hmmsearch -o PF00560.out --tblout PF00560_tbl.out --domtblout PF00560_domtbl.out --max PF00560.hmm PK_filtered.fasta
