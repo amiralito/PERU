@@ -1,3 +1,4 @@
+# Phylogenomics of PERU and FLS2 LRR-RK immune receptors in Solanaceae plant family
 # Part two - Search for PK and LRR containing proteins
 
 After compiling the protein database, extract the LRR-RK using the following steps:
