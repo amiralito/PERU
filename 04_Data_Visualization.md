@@ -10,6 +10,8 @@ In this step, the tip identifiers for the [PERU](trees/PERU.txt) and [FLS2](tree
 The metadata for the amplified sequences added to the final set of PERU clade is also added later using [tabel S6](tables/table_S6.csv).
 
 ```R
+# R
+
 library(Biostrings)
 library(tidyverse)
 library(readr)
@@ -62,6 +64,8 @@ org_list <- read_csv("/path/to/trees/org_list.txt", col_names = FALSE) %>%
 This code creates a binary data frame that indicates whether each sequence in the `DM_hm_nr_meta` data frame belongs to a particular species. The [`species_list`](trees/species_list.txt) data frame contains a list of species names ordered based on the [Solanum species phylogenetic tree](trees/Solanum_species.newick) obtained from [Tang, et al., (2022)](https://doi.org/10.1038/s41586-022-04822-x). The code iterates over the rows of `species_list` and creates a logical vector that indicates whether the current sequence name matches the species name. The code then creates a column in the binary data frame for the current species name and populates the column with the values from the logical vector. The code then sets the row names of the binary data frame to the sequence names, removes the sequence name column, replaces all NA values with 0, and transposes the data frame. The resulting data frame can be used to identify the species of each sequence in the `DM_hm_nr_meta` data frame. This will be used to generate the presence/absence heatmap. The same code is also used to generate a similar binary data frame for FLS2 clade.
 
 ```R
+# R
+
 ## PERU with responsive and non-responsive homologs
 
 # create a data frame with the sequence names as the only column.
@@ -93,6 +97,8 @@ tDM_hm_nr_binary_df <- t(DM_hm_nr_binary_df) %>% as.data.frame()
 The code below also creates a binary data frame that indicates whether each sequence in the `DM_hm_nr_meta` and `FLS2_meta` data frames belongs to a particular organism (genome) in [`org_list`](trees/org_list.txt). The line-by-line annotation follows the previous script but based on organism names.
 
 ```R
+# R
+
 # PERU
 DM_hm_nr_org_binary_df <- data.frame(seqname = DM_hm_nr_meta$seqname)
 
@@ -133,6 +139,8 @@ FLS2_org_binary_df[is.na(FLS2_org_binary_df)] <- 0
 The `pheatmap` function is used to create heatmaps. The resulting heatmaps shows the distribution of the binary values in the `DM_hm_nr_binary_df` data frame. The rows of the heatmaps represent the species in the data frame and the columns represent the sequences. The colors in the heatmaps represent the presence (dark grey) or absence (white) in the data frame.
 
 ```R
+# R
+
 library(pheatmap)
 
 # custom color palette used for the plots
@@ -157,6 +165,8 @@ The following code snippets also create the heatmaps that appear in Figure S10, 
 
 ##### Figure S10A:
 ```R
+# R
+
 p_DM_hm_nr_org <- pheatmap(DM_hm_nr_org_binary_df, 
                         cluster_rows = FALSE, cluster_cols = FALSE, 
                         show_colnames = TRUE, show_rownames = TRUE,
@@ -173,6 +183,8 @@ ggsave(plot = p_DM_hm_nr_org, filename = "DM_hm_nr_pa_org.pdf",width = 25, heigh
 ##### Figure S10B:
 
 ```R
+# R
+
 p_FLS2_org <- pheatmap(FLS2_org_binary_df, 
                      cluster_rows = FALSE, cluster_cols = FALSE, 
                      show_colnames = TRUE, show_rownames = TRUE,
