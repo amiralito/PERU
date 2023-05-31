@@ -51,10 +51,6 @@ writeXStringSet(SolDB, "/path/to/your/directory/SolDB.fasta")
 Import the genome data on [table S2](/tables/table_S2.csv) and compile the metadata:
 
 ```R
-library(Biostrings)
-library(tidyverse)
-library(readr)
-
 # metadata compilation
 
 # import the genome metadata information file (table S2)
