@@ -58,7 +58,7 @@ library(readr)
 # metadata compilation
 
 # import the genome metadata information file (table S2)
-Genome_data <- read_csv("/path/to/tables/table S2.csv") # import genome metadata
+Genome_data <- read_csv("/path/to/tables/table_S2.csv") # import genome metadata
 
 genome_meta <- Genome_data[,c(1,  # organism
                               2,  # scientific name
