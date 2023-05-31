@@ -87,7 +87,7 @@ tDM_hm_nr_binary_df <- t(DM_hm_nr_binary_df) %>% as.data.frame()
 ```
 
 ##### Per Genome:
-The code below also creates a binary data frame that indicates whether each sequence in the `DM_hm_nr_meta` and `FLS2_meta` data frames belongs to a particular organism (genome) in `org_list`. The line-by-line annotation follows the previous script but this time based on organism names.
+The code below also creates a binary data frame that indicates whether each sequence in the `DM_hm_nr_meta` and `FLS2_meta` data frames belongs to a particular organism (genome) in [`org_list`](trees/org_list.txt). The line-by-line annotation follows the previous script but based on organism names.
 
 ```R
 library(tidyverse)
