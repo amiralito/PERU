@@ -1,3 +1,6 @@
+# Part One
+# Database preparation
+
 After downloading the data from ./proteomes unzip it using the following command (mac OS) or other decompressing programs:
 
 ```bash 
