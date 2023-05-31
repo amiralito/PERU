@@ -4,7 +4,9 @@
 After downloading the data from [proteomes](/proteomes) unzip it using the following command (mac OS) or other decompressing programs:
 
 ```bash 
-cd /path/to/proteomes/ gunzip *.gz
+cd /path/to/proteomes/ 
+
+gunzip *.gz
 ```
 
 Then in R compile all into a single protein fasta file, which will be used to extract LRR-RK sequences from later. In this :
