@@ -1,5 +1,5 @@
 # Phylogenomics of PERU and FLS2 LRR-RK immune receptors in Solanaceae plant family
-# Part One - Database preparation
+# Part one - Database preparation
 
 After downloading the data from [proteomes](/proteomes) unzip it using the following command (mac OS) or other decompressing programs:
 
