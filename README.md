@@ -15,6 +15,7 @@ Software                            | Source
 
 R packages:
 
+*R version 4.2.0 (2022-04-22)*
 ```R
 install.packages("tidyverse")
 install.packages("readr")
