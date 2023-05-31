@@ -1,3 +1,5 @@
+# Part two - Search for PK and LRR containing proteins
+
 After compiling the protein database, extract the LRR-RK using the following steps:
 
 1. Search for proteins containing PK domain using *hmmsearch* and PF00069.hmm
