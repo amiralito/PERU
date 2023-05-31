@@ -11,6 +11,8 @@ hmmsearch -o PF00069.out --tblout PF00069_tbl.out --domtblout PF00069_domtbl.out
 
 - Import and process the *hmmsearch* output:
 ```R
+# R
+
 library(Biostrings)
 library(tidyverse)
 library(readr)
@@ -67,6 +69,8 @@ hmmsearch -o PF13855.out --tblout PF13855_tbl.out --domtblout PF13855_domtbl.out
 
 - Import and process the *hmmsearch* output
 ```R
+# R
+
 library(Biostrings)
 library(tidyverse)
 library(readr)
