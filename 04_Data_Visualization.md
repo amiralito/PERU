@@ -163,7 +163,8 @@ p_DM_hm_nr_org <- pheatmap(DM_hm_nr_org_binary_df,
                         cellwidth = 10, cellheight = 10) # optional (as in fig S10A)
 
 # optional: you can export the plot
-ggsave(plot = p_DM_hm_nr_org, filename = "DM_hm_nr_pa_org.pdf",width = 25, height = 35, units = "in", dpi = "retina", device = "pdf", path = "/path/to/your/directory/")
+ggsave(plot = p_DM_hm_nr_org, filename = "DM_hm_nr_pa_org.pdf",width = 25, height = 35, units = "in", dpi = "retina", device = "pdf", 
+       path = "/path/to/your/directory/")
 
 ```
 
