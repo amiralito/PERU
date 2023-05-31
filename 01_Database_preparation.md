@@ -48,7 +48,7 @@ SolDB_meta$file_name <- gsub("*.fasta", "", SolDB_meta$file_name) # file name cl
 writeXStringSet(SolDB, "/path/to/your/directory/SolDB.fasta")
 ```
 
-Import the genome data on [table S2](tables/table S2.csv) and compile the metadata:
+Import the genome data on [table S2](/tables/table_S2.csv) and compile the metadata:
 
 ```R
 library(Biostrings)
