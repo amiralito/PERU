@@ -171,7 +171,8 @@ p_FLS2_org <- pheatmap(FLS2_org_binary_df,
                      cluster_rows = FALSE, cluster_cols = FALSE, 
                      show_colnames = TRUE, show_rownames = TRUE,
                      color = mypalette(2), 
-                     border_color = "white", cellwidth = 10, cellheight = 10)
+                     border_color = "white", 
+                     cellwidth = 10, cellheight = 10) # optional (as in fig S10B)
 
 # optional: you can export the plot
 ggsave(plot = p_FLS2_org, filename = "FLS2_pa_org.pdf",width = 25, height = 25, units = "in", dpi = "retina", device = "pdf", 
