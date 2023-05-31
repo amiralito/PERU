@@ -1,3 +1,4 @@
+# Phylogenomics of PERU and FLS2 LRR-RK immune receptors in Solanaceae plant family
 # Part three - Phylogenetic tree construction and analyses
 
 To study the phylogenetic relationships of LRR-RK sequences, we first extracted their PK domains and aligned them with the PK domains of reference LRR-RKs using *MAFFT*. The resulting alignment was then used to construct phylogenetic trees using *FastTree*. This was done for all four sets of sequences deposited in the supplementary material: LRR-RKs, Subgroup XII, PERU, and FLS2.
