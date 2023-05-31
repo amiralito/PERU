@@ -1,3 +1,6 @@
+# Phylogenomics of PERU and FLS2 LRR-RK immune receptors in Solanaceae plant family
+# Part four - Data Visualization
+
 Once the PERU and FLS2 phylogenetic clades were extracted, heatmaps were generated in R using the following script. The phylogenetic trees were then visualized using iTOL and manually assembled with the heatmaps.
 
 - raw data preparation:
