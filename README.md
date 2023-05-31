@@ -24,3 +24,8 @@ if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install("Biostrings")
 ```
+
+* [Part one - Database preparation](/01_Database_preparation.md)
+* [Part two - Search for PK and LRR containing proteins](/02_Search_for_PK_and_LRR_containing_proteins.md)
+* [Part three - Phylogenetic tree construction and analyses](/03_Phylogenetic_tree_construction_and_analyses.md)
+* [Part four - Data Visualization](/04_Data_Visualization.md)
