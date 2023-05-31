@@ -5,7 +5,7 @@ Once the PERU and FLS2 phylogenetic clades were extracted, heatmaps were generat
 
 - raw data preparation:
 
-In this step, the tip identifiers for the [PERU](trees/PERU.txt) and [FLS2](trees/FLS2.txt) clades are imported and ordered in the same way as the phylogenetic trees. This will be used later to create heatmaps that show the presence or absence of genes across different organisms in each clade.
+In this step, the tip identifiers for the [PERU](trees/PERU.txt) and [FLS2](trees/FLS2.txt) clades, ordered in the same way as the phylogenetic trees, are imported. This will be used later to create heatmaps that show the presence or absence of genes across different organisms in each clade.
 
 ```R
 library(Biostrings)
