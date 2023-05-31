@@ -12,6 +12,8 @@ gunzip *.gz
 Then in R compile all into a single protein fasta file, which will be used to extract LRR-RK sequences from:
 
 ```R
+# R
+
 # load the requierd packages
 library(Biostrings)
 library(tidyverse)
@@ -51,6 +53,8 @@ writeXStringSet(SolDB, "/path/to/your/directory/SolDB.fasta")
 Import the genome data on [table S2](/tables/table_S2.csv) and compile the metadata:
 
 ```R
+# R
+
 # metadata compilation
 
 # import the genome metadata information file (table S2)
