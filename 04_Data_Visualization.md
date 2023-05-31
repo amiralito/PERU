@@ -4,6 +4,9 @@
 Once the PERU and FLS2 phylogenetic clades were extracted, heatmaps were generated in R using the following script. The phylogenetic trees were then visualized using iTOL and manually assembled with the heatmaps.
 
 - raw data preparation:
+
+In this step, the tip identifiers for the [PERU](trees/PERU.txt) and [FLS2](trees/FLS2.txt) clades are imported and ordered in the same way as the phylogenetic trees. This will be used later to create heatmaps that show the presence or absence of genes across different organisms in each clade.
+
 ```R
 library(Biostrings)
 library(tidyverse)
@@ -54,7 +57,7 @@ org_list <- read_csv("/path/to/trees/org_list.txt", col_names = FALSE) %>%
 - producing presence/absence matrices
 
 ##### Per Species:
-This code creates a binary data frame that indicates whether each sequence in the `DM_hm_nr_meta` data frame belongs to a particular species. The [`species_list`](trees/species_list.txt) data frame contains a list of species names. The code iterates over the rows of `species_list` and creates a logical vector that indicates whether the current sequence name matches the species name. The code then creates a column in the binary data frame for the current species name and populates the column with the values from the logical vector. The code then sets the row names of the binary data frame to the sequence names, removes the sequence name column, replaces all NA values with 0, and transposes the data frame. The resulting data frame can be used to identify the species of each sequence in the `DM_hm_nr_meta` data frame. This will be used to generate the presence/absence heatmap. The same code is also used to generate a similar binary data frame for FLS2 clade.
+This code creates a binary data frame that indicates whether each sequence in the `DM_hm_nr_meta` data frame belongs to a particular species. The [`species_list`](trees/species_list.txt) data frame contains a list of species names ordered based on the [Solanum species phylogenetic tree](trees/Solanum_species.newick) obtained from [Tang, et al., (2022)](https://doi.org/10.1038/s41586-022-04822-x). The code iterates over the rows of `species_list` and creates a logical vector that indicates whether the current sequence name matches the species name. The code then creates a column in the binary data frame for the current species name and populates the column with the values from the logical vector. The code then sets the row names of the binary data frame to the sequence names, removes the sequence name column, replaces all NA values with 0, and transposes the data frame. The resulting data frame can be used to identify the species of each sequence in the `DM_hm_nr_meta` data frame. This will be used to generate the presence/absence heatmap. The same code is also used to generate a similar binary data frame for FLS2 clade.
 
 ```R
 ## PERU with responsive and non-responsive homologs
