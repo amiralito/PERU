@@ -17,4 +17,4 @@ FastTree alignment.afa > tree.newick
 
 ```
 
-The full-length sequences of PERU and FLS2 were checked for the presence of a signal peptide using SignalP 6 and the LRRNT domain. FLS2 sequences were also filtered to remove sequences shorter than 1150 amino acids.
+The full-length sequences of PERU and FLS2 were checked for the presence of a signal peptide using `SignalP 6` and the LRRNT domain. FLS2 sequences were also filtered to remove sequences shorter than 1150 amino acids.
