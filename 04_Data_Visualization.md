@@ -24,19 +24,21 @@ FLS2 <- read_table("/path/to/trees/FLS2.txt", col_names = FALSE) %>% setNames("I
 
 
 # import the amplified seqeuences metadata (table S6)
-hm_meta <- read_csv("/path/to/tables/table_S6.csv")
+hm_meta <- read_csv("./tables/table_S6.csv")
 hm_meta$Species <- gsub("S.","Solanum", hm_meta$Species) # slight modifications to make it compatible with the rest of the data
+hm_meta <- hm_meta[,-c(2,4,5)] # remove unnecessary information
 
 
 ## extract metadata and tidy it up
 
 # PERU and homologs responsive/non-responsive
 DM_hm_nr_meta <- SolDB_metadata[SolDB_metadata$ID %in% DM_hm_nr$ID,]
+colnames(DM_hm_nr_meta)[colnames(DM_hm_nr_meta) == "Scientific name (simplified)"] <- "Species"
 DM_hm_nr_meta <- DM_hm_nr %>% left_join(DM_hm_nr_meta, by = "ID")
 
 DM_hm_nr_meta <- merge(DM_hm_nr_meta, hm_meta, by = "ID", all.x = TRUE) # add the species metadata of the responsive/non-responsive homologs
-DM_hm_nr_meta$SciName <- coalesce(DM_hm_nr_meta$SciName.x, DM_hm_nr_meta$SciName.y) # clean up
-DM_hm_nr_meta <- DM_hm_nr_meta[,-c(7,8)]
+DM_hm_nr_meta$SciName <- coalesce(DM_hm_nr_meta$Species.x, DM_hm_nr_meta$Species.y) # clean up
+DM_hm_nr_meta <- DM_hm_nr_meta[,-c(4,5)]
 
 DM_hm_nr_meta <- DM_hm_nr %>% left_join(DM_hm_nr_meta, by = "ID") # reorder the based on the phylogenetic tree
 
