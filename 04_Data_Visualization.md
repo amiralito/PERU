@@ -71,7 +71,7 @@ This code creates a binary data frame that indicates whether each sequence in th
 ## PERU with responsive and non-responsive homologs
 
 # create a data frame with the sequence names as the only column.
-DM_hm_nr_binary_df <- data.frame(seqname = DM_hm_nr_meta$seqname)
+DM_hm_nr_binary_df <- data.frame(seqname = DM_hm_nr_meta$ID)
 
 # iterate over the rows of the species list.
 for (i in 1:nrow(species_list)) {
