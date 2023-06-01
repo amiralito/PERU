@@ -97,10 +97,10 @@ LRR8_tbl <- filter(LRR8_tbl, LRR8_tbl$X5 < 0.01) # remove anything below the e-v
 LRR8 <- LRR8_tbl$X1 %>% as.data.frame() # keep only the ids
 
 #LRRNT2
+# skip filtering by E-value for LRRNT domain
 LRRNT2_tbl <- read_table("/path/to/PF08263_tbl.out",
                       col_names = FALSE, col_types = cols(X19 = col_skip()), 
                       skip = 3) %>% head(-10)
-LRRNT2_tbl <- filter(LRRNT2_tbl, LRRNT2_tbl$X5 < 0.01) # remove anything below the e-value threshold of 0.01
 LRRNT2 <- LRRNT2_tbl$X1 %>% as.data.frame() # keep only the ids
 
 # merge all LRR containing proteins
