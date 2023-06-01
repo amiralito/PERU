@@ -26,7 +26,7 @@ PK_tbl <- read_table("/path/to/PF00069_tbl.out",
 PK_scores <- PK_tbl[,c(1,5,6,7)] %>% setNames(c("ID","E-Value","score","bias")) # dataframe with only scores and e-values
 PK_scores_filtered <- PK_scores[PK_scores$`E-Value` < 0.01,] # remove anything below the e-value threshold of 0.01
 
-PK_seq <- SolDB_geneious[PK_scores_filtered$ID] # PK containing sequences
+PK_seq <- SolDB[PK_scores_filtered$ID] # PK containing sequences
 
 
 # keep onky the sequences with one kinase domain
