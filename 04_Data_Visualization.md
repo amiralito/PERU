@@ -102,7 +102,7 @@ The code below also creates a binary data frame that indicates whether each sequ
 # R
 
 # PERU
-DM_hm_nr_org_binary_df <- data.frame(seqname = DM_hm_nr_meta$seqname)
+DM_hm_nr_org_binary_df <- data.frame(seqname = DM_hm_nr_meta$ID)
 
 for (i in 1:nrow(org_list)) {
   organism <- org_list$Organism[i]
@@ -119,7 +119,7 @@ DM_hm_nr_org_binary_df[is.na(DM_hm_nr_org_binary_df)] <- 0
 
 
 # FLS2
-FLS2_org_binary_df <- data.frame(seqname = FLS2_meta$seqname)
+FLS2_org_binary_df <- data.frame(seqname = FLS2_meta$ID)
 
 for (i in 1:nrow(org_list)) {
   organism <- org_list$Organism[i]
