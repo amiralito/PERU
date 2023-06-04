@@ -1,9 +1,11 @@
 # Phylogenomics of PERU and FLS2 LRR-RK immune receptors in Solanaceae plant family
 # Part three - Phylogenetic tree construction and analyses
 
-To study the phylogenetic relationships of LRR-RK sequences, we first extracted their PK domains and aligned them with the PK domains of reference LRR-RKs using *MAFFT*. The resulting alignment was then used to construct phylogenetic trees using *FastTree*. This was done for all four sets of sequences deposited in the supplementary material: [LRR-RKs](trees/LRR_RK.newick), [Subgroup XII](trees/XII.newick), [PERU](trees/PERU.newick), and [FLS2](trees/FLS2.newick).
+To study the phylogenetic relationships of LRR-RK sequences, we first extracted their PK domains and aligned them with the PK domains of reference LRR-RKs ([table S8](tables/table_S8.csv)) using *MAFFT*. The resulting alignment was then used to construct phylogenetic trees using *FastTree*. This was done for all four sets of sequences deposited in the supplementary material: [LRR-RKs](trees/LRR_RK.newick), [Subgroup XII](trees/XII.newick), [PERU](trees/PERU.newick), and [FLS2](trees/FLS2.newick).
 
-To extract the PERU clade, we performed multiple iterations of alignment and tree construction. In each iteration, we identified a well-supported major branch and extracted it using *Dendroscope* (Options > Advanced Options > Extract Subnetwork...). We then realigned the extracted sequences and constructed a new tree. This process was repeated until we obtained a tree with good resolution for comparing PERU with its closely related sequences (average pairwise alignment ~77%; PK domain only).
+To extract the PERU clade, we performed multiple iterations of alignment and tree construction. In each iteration, we identified a well-supported major branch and extracted it using *Dendroscope* (Options > Advanced Options > Extract Subnetwork...). We then realigned the extracted sequences and constructed a new tree. This process was repeated until we obtained a tree with good resolution for comparing PERU with its closely related sequences (average pairwise alignment ~77%; PK domain only):
+
+1. Extract a well supported 
 
 Finally, we extracted the full-length sequences for the final clade to obtain a more concise alignment and a better overview of the phylogenetic relationships of both the PERU and FLS2 clades.
 
