@@ -16,7 +16,10 @@ To extract the PERU clade, we performed multiple iterations of alignment and tre
 ![DM_superclade](extras/DM_superclade.png)
 
 
-Finally, we extracted the full-length sequences for the final clade to obtain a more concise alignment and a better overview of the phylogenetic relationships of both the PERU and FLS2 clades.
+Finally, we extracted the full-length sequences for the final clade and filtered it according to the steps descibed in the methods to obtain a more concise alignment and a better overview of the phylogenetic relationships of both the PERU and FLS2 clades. The full-length sequences of PERU and FLS2 were checked for the presence of a signal peptide using `SignalP 6` and the LRRNT domain. FLS2 sequences were also filtered to remove sequences shorter than 1150 amino acids.
+
+
+General code for alignment and tree construction:
 
 ```bash
 
@@ -27,5 +30,3 @@ mafft --anysymbol sequence.fasta > alignment.afa
 FastTree alignment.afa > tree.newick
 
 ```
-
-The full-length sequences of PERU and FLS2 were checked for the presence of a signal peptide using `SignalP 6` and the LRRNT domain. FLS2 sequences were also filtered to remove sequences shorter than 1150 amino acids.
