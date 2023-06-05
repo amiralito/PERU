@@ -13,7 +13,7 @@ Only keep the sequences with PK domain sequence length of 260-280 amino acids. T
 
 2. Realign the extracted sequences with Reference RKs and make a new tree. Then again, extract a well supported branch containing the DM (*PERU DM*). This clade is considered as the PERU clade but before the final filtering.
 
-![DM_superclade](extras/DM_superclade.png)
+![DM_superclade]
 
 
 Finally, we extracted the full-length sequences for the final clade and filtered it according to the steps descibed in the methods to obtain a more concise alignment and a better overview of the phylogenetic relationships of both the PERU and FLS2 clades. The full-length sequences of PERU and FLS2 were checked for the presence of a signal peptide using `SignalP 6` and the LRRNT domain. FLS2 sequences were also filtered to remove sequences shorter than 1150 amino acids.
