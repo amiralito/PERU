@@ -9,9 +9,9 @@ To extract the PERU clade, we performed multiple iterations of alignment and tre
 
 ![XII_DM_superclade](extras/XII_DM_superclade.png)
 
-1.2. Only keep the sequences with PK domain sequence length of 260-280 amino acids. This is based on average length of the PK domain within this phylogenetic clade. Most sequences fall in the 260-280 amino acid range.
+Only keep the sequences with PK domain sequence length of 260-280 amino acids. This is based on average length of the PK domain within this phylogenetic clade. Most sequences fall in the 260-280 amino acid range.
 
-2. Realign the extracted sequences with Reference RKs and make a new tree. Then again, extract a well supported branch containing the DM (*PERU DM*). This clade is considered as the PERU clade but before the final filtering.
+2. Realign the extracted sequences with Reference RKs and make a new tree. Then again, extract [a well supported branch containing the DM](trees/DM_superclade_PK_filtered_ref.newick) (*PERU DM*). This clade is considered as the PERU clade but before the final filtering.
 
 ![DM_superclade](extras/DM_superclade.png)
 
