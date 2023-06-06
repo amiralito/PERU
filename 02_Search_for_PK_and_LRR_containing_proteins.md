@@ -115,3 +115,6 @@ LRR_PK_seq <- PK_domain_seq[LRR$ID]
 writeXStringSet(LRR_seq, "/path/to/LRR.fasta") # full-length
 writeXStringSet(LRR_PK_seq, "/path/to/LRR_PKD.fasta") # PK domain only
 ```
+
+
+[Main](README.md) | [Next: 03. Phylogenetic tree construction and analyses](03_Phylogenetic_tree_construction_and_analyses.md)
