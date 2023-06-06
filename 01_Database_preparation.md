@@ -70,3 +70,4 @@ SolDB_metadata <- SolDB_meta %>% left_join(genome_meta, by = "file_name")
 write_csv(SolDB_metadata, "/path/to/your/directory/SolDB_metadata.csv") # export if you like
 ```
 
+[Main](README.md)|[Next: 02. Search for PK and LRR containing proteins](02_Search_for_PK_and_LRR_containing_proteins.md)
