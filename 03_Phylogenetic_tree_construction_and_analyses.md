@@ -30,3 +30,6 @@ mafft --anysymbol sequence.fasta > alignment.afa
 FastTree alignment.afa > tree.newick
 
 ```
+
+
+[Main](README.md) | [Next: 04. Data Visualization](04_Data_Visualization.md)
