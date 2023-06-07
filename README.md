@@ -12,6 +12,7 @@ Software                            | Source
 *FastTree v2.1.11*                  | (http://www.microbesonline.org/fasttree/)
 *Dendroscope v3.8.8*                | (https://software-ab.cs.uni-tuebingen.de/download/dendroscope3/welcome.html)
 *SignalP v6.0*                      | (https://services.healthtech.dtu.dk/services/SignalP-6.0/)
+*R*                                 | (https://cran.r-project.org/)
 
 R packages:
 
