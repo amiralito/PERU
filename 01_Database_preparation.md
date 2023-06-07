@@ -25,7 +25,7 @@ fasta_dir <- "/path/to/the/proteoms/"
 # get a list of all the file names in the directory
 fasta_files <- list.files(fasta_dir, pattern = ".fasta", recursive = TRUE)
 
-# use lapply() to read in each file and store the sequences as a DNAStringSet object
+# use lapply() to read in each file and store the sequences as a AAStringSet object
 fasta_seqs <- lapply(fasta_files, function(x) {
   # Read in the fasta file
   seqs <- readAAStringSet(file.path(fasta_dir, x))
