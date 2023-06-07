@@ -24,7 +24,7 @@ FLS2 <- read_table("/path/to/trees/FLS2.txt", col_names = FALSE) %>% setNames("I
 
 
 # import the amplified seqeuences metadata (table S6)
-hm_meta <- read_csv("./tables/table_S6.csv")
+hm_meta <- read_csv("/path/to/tables/table_S6.csv")
 hm_meta$Species <- gsub("S.","Solanum", hm_meta$Species) # slight modifications to make it compatible with the rest of the data
 hm_meta <- hm_meta[,-c(2,4,5)] # remove unnecessary information
 
