@@ -5,9 +5,9 @@ Once the PERU and FLS2 phylogenetic clades were extracted, heatmaps were generat
 
 - raw data preparation:
 
-In this step, the tip identifiers for the [PERU](trees/PERU.txt) and [FLS2](trees/FLS2.txt) clades, ordered in the same way as the phylogenetic trees, are imported. This will be used later to create heatmaps that show the presence or absence of genes across different organisms in each clade.
+In this step, the tip identifiers for the [PERU](trees/PERU.txt) and [FLS2](trees/FLS2.txt) clades, ordered in the same way as the phylogenetic trees are imported. This will be used later to create heatmaps that show the presence or absence of genes across different organisms in each clade.
 
-The metadata for the amplified sequences added to the final set of PERU clade is also added later using [tabel S6](tables/table_S6.csv).
+The metadata for the amplified sequences added to the final set of PERU clade is also added later using [data S6](tables/data_S6.csv).
 
 ```R
 # R
@@ -23,8 +23,8 @@ DM_hm_nr <- read_table("/path/to/trees/PERU.txt", col_names = FALSE) %>% setName
 FLS2 <- read_table("/path/to/trees/FLS2.txt", col_names = FALSE) %>% setNames("ID") # FLS2 clade
 
 
-# import the amplified seqeuences metadata (table S6)
-hm_meta <- read_csv("/path/to/tables/table_S6.csv")
+# import the amplified sequences metadata (data S6)
+hm_meta <- read_csv("/path/to/tables/data_S6.csv")
 hm_meta$Species <- gsub("S.","Solanum", hm_meta$Species) # slight modifications to make it compatible with the rest of the data
 hm_meta <- hm_meta[,-c(2,4,5)] # remove unnecessary information
 
@@ -63,7 +63,7 @@ org_list <- read_csv("/path/to/trees/org_list.txt", col_names = FALSE) %>%
 - producing presence/absence matrices
 
 ##### Per Species:
-This code creates a binary data frame that indicates whether each sequence in the `DM_hm_nr_meta` data frame belongs to a particular species. The [`species_list`](trees/species_list.txt) data frame contains a list of species names ordered based on the [Solanum species phylogenetic tree](trees/Solanum_species.newick) obtained from [Tang, et al., (2022)](https://doi.org/10.1038/s41586-022-04822-x). The code iterates over the rows of `species_list` and creates a logical vector that indicates whether the current sequence name matches the species name. The code then creates a column in the binary data frame for the current species name and populates the column with the values from the logical vector. The code then sets the row names of the binary data frame to the sequence names, removes the sequence name column, replaces all NA values with 0, and transposes the data frame. The resulting data frame can be used to identify the species of each sequence in the `DM_hm_nr_meta` data frame. This will be used to generate the presence/absence heatmap. The same code is also used to generate a similar binary data frame for FLS2 clade.
+This code creates a binary data frame that indicates whether each sequence in the `DM_hm_nr_meta` data frame belongs to a particular species. The [`species_list`](trees/species_list.txt) data frame contains a list of species names ordered based on the [Solanum species phylogenetic tree](trees/Solanum_species.newick) obtained from [Tang, et al., (2022)](https://doi.org/10.1038/s41586-022-04822-x). The code iterates over the rows of `species_list` and creates a logical vector that indicates whether the current sequence name matches the species name. The code then creates a column in the binary data frame for the current species name and populates the column with the values from the logical vector. The code then sets the row names of the binary data frame to the sequence names, removes the sequence name column, replaces all NA values with 0, and transposes the data frame. The resulting data frame can be used to identify the species of each sequence in the `DM_hm_nr_meta` data frame. This will be used to generate the presence/absence heatmap. The same code is also used to generate a similar binary data frame for the FLS2 clade.
 
 ```R
 # R
@@ -138,7 +138,7 @@ FLS2_org_binary_df[is.na(FLS2_org_binary_df)] <- 0
 
 - Generating the plots
 ##### Figure 4A:
-The `pheatmap` function is used to create heatmaps. The resulting heatmaps shows the distribution of the binary values in the `DM_hm_nr_binary_df` data frame. The rows of the heatmaps represent the species in the data frame and the columns represent the sequences. The colors in the heatmaps represent the presence (dark grey) or absence (white) in the data frame.
+The `pheatmap` function is used to create heatmaps. The resulting heatmaps show the distribution of the binary values in the `DM_hm_nr_binary_df` data frame. The rows of the heatmaps represent the species in the data frame and the columns represent the sequences. The colors in the heatmaps represent the presence (dark grey) or absence (white) in the data frame.
 
 ```R
 # R
