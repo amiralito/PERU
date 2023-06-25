@@ -50,15 +50,15 @@ SolDB_meta$file_name <- gsub("*.fasta", "", SolDB_meta$file_name) # file name cl
 writeXStringSet(SolDB, "/path/to/your/directory/SolDB.fasta")
 ```
 
-Import the genome data on [table S2](/tables/table_S2.csv) and compile the metadata:
+Import the genome data on [data S2](/tables/data_S2.csv) and compile the metadata:
 
 ```R
 # R
 
 # metadata compilation
 
-# import the genome metadata information file (table S2)
-Genome_data <- read_csv("/path/to/tables/table_S2.csv") # import genome metadata
+# import the genome metadata information file (data S2)
+Genome_data <- read_csv("/path/to/tables/data_S2.csv") # import genome metadata
 
 genome_meta <- Genome_data[,c(1,  # organism
                               2,  # scientific name
