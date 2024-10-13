@@ -1,7 +1,7 @@
 # Phylogenetics of PERU and FLS2 LRR-RK immune receptors in the Solanaceae plant family
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8079625.svg)](https://doi.org/10.5281/zenodo.8079625)
-![DOI](https://img.shields.io/badge/science-doi.org/10.1126/science.adg5261-red.svg)
+[![DOI](https://img.shields.io/badge/science-doi.org/10.1126/science.adg5261-red.svg)](https://doi.org/10.1126/science.adg5261)
 
 Supporting scripts, data, and methods for the "Functional diversification of a wild potato PRR immune receptor at its center of origin".
 
